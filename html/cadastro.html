@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/cadastro.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li id="logo">
+                    <img src="../img/logo.png" alt="Logo">
+                </li>
+                <li><a href="../html/pagInicial.html">Página Inicial</a></li>
+                    <li><a href="../html/dicasereceitas.html">Estilo de Vida</a></li>
+                    <li><a href="../html/blog-noticias.html">Blog</a></li>
+                    <li><a href="../html/perguntas.html">Perguntas Frequentes</a></li>
+                <li id="login">
+                    <button class="login">Login</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <form>
+                <label> Nome Completo</label>
+                <input id="nome" type="text">
+
+                <label>E-mail</label>
+                <input id="e-mail" type="text">
+
+                <label>Celular</label>
+                <input id="celular" type="text">
+
+                <label>Data de Nascimento</label>
+                <input id="data" type="date">
+            </form>
+
+            <div id="genero" class="radio">
+                <h3>Gênero</h3>
+                <label for="radio1">
+                    <input id="radio1" type="radio" name="genero" value="Feminino"> Feminino(Cisgênero)
+                </label>
+                <label for="radio2">
+                    <input id="radio2" type="radio" name="genero" value="Masculino"> Masculino(Cisgênero)
+                </label>
+                <label for="radio3">
+                    <input id="radio3" type="radio" name="genero" value="outro"> Feminino(Transgênero)
+                </label>
+                <label for="radio4">
+                    <input id="radio4" type="radio" name="genero" value="prefiro-nao-informar"> Masculino(Transgênero)
+                </label>
+                <label for="radio5">
+                    <input id="radio5" type="radio" name="genero" value="prefiro-nao-informar"> Prefiro não responder
+                </label>
+            </div>
+
+            <div id="Diabetes" class="Diabetestipo">
+                <h1>Diabetes Tipo</h1>
+                <label for="tipo1">
+                    <input id="tipo1" type="radio" name="Diabetes" value="Tipo1"> Tipo 1
+                </label>
+                <label for="tipo1">
+                    <input id="tipo2" type="radio" name="Diabetes" value="Tipo2"> Tipo 2
+                </label>
+                <label for="tipo1">
+                    <input id="tipo3" type="radio" name="Diabetes" value="Tipo3"> Tipo 3
+                </label>
+                <label for="tipo1">
+                    <input id="Prefiro não responder" type="radio" name="Diabetes" value="Prefiro não responder"> Prefiro não responder
+                </label>
+
+            </div>
+            <div id="Motivospara">
+                <h1>Quais seus motivos para utilizar o Diabetes em foco? </h1>
+                <label for="Calculadora">
+                    <input id="Calculadora" type="radio" name="Motivospara" value="Calculadora"> Calculadora
+                </label>
+                <label for="Artigosinformativos">
+                    <input id="Artigosinformativos" type="radio" name="Motivospara" value="Artigosinformativos"> Artigos informativos
+                </label>
+                <label for="Noticias">
+                    <input id="Noticias" type="radio" name="Motivospara" value="Noticias"> Notícias
+                </label>
+
+                <label for="Tirarduvidas">
+                    <input id="Tirarduvidas" type="radio" name="Motivospara" value="Tirarduvidas"> Tirar Dúvidas
+                </label>
+                <label for="Minhasaudeglicemica">
+                    <input id="Minhasaudeglicemica" type="radio" name="Motivospara"  value="Minhasaudeglicemica">Acompanhar minha saúde
+                    glicêmica
+                </label>
+                <label for="Prefironaoresponder">
+                    <input id="Prefironaoresponder" type="radio" name="Motivospara" value="Prefironaoresponder"> Prefiro não responder
+                </label>
+            </div>
+            <div id="Termos">
+                <label for="Termos">
+                    <input id="Termos" type="checkbox" value="Termos"> Li e aceito os <a href="#">termos de
+                        privacidade</a>
+                </label>
+                <button class="login" id="button2">Cadastrar</button>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

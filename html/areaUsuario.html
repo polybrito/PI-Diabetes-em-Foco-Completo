@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area do Usuário</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li id="logo">
+                    <img src="../img/logo.png" alt="Logo">
+                </li>
+                <li><a href="../html/pagInicial.html">Página Inicial</a></li>
+                    <li><a href="../html/dicasereceitas.html">Estilo de Vida</a></li>
+                    <li><a href="../html/blog-noticias.html">Blog</a></li>
+                    <li><a href="../html/perguntas.html">Perguntas Frequentes</a></li>
+                <li id="login">
+                    <button class="login">Login</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- seção do gráfico -->
+    <section id="secaoGrafico">
+        <div class="content">
+            <div id="containerGrafico">
+                <div id="grafico">
+                    <canvas id="chart" width="400" height="100"></canvas>
+                </div>
+            </div>
+            
+            <article id="graficoText">
+                <p>
+                    Este gráfico acompanha suas medições de glicemia e atualiza automaticamente sempre que um novo registro é inserido. As classificações são feitas da seguinte forma: valores entre 70 e 180 mg/dL são considerados "Boas", valores acima de 180 mg/dL são "Altas", e abaixo de 70 mg/dL são "Baixas". Essas informações ajudam a monitorar seu controle glicêmico e ajustar as doses de insulina de maneira mais precisa e eficaz.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- seção da calculadora de insulina -->
+    <section id="calcCho">
+        <h1>Calculadora de Insulina</h1>
+            <div class="content">
+                <form action="#" method="post" id="calcChoForm">
+                    <label for="cho/ins">Relação Carboidrato insulina</label>
+                    <input type="text" id="choIns" placeholder="1:">
+                    <label for="glicMeta">Glicemia Meta</label>
+                    <input type="number" id="glicMeta">
+                    <label for="sensIns">Sensibilidade insulina</label>
+                    <input type="number" id="sensIns">
+                    <label for="glicRefeicao">Glicemia da refeição</label>
+                    <input type="number" id="glicRefeicao">
+                    <label for="cho">Carboidratos da refeição</label>
+                    <input type="number" id="cho">
+                    <button type="submit" id="sendCho">Enviar</button>
+                </form>
+
+                <section class="resultado" id="resultadoCho">
+                    <p id="paragrafoCho">
+                    </p>
+                    <button id="voltarBntCho">Voltar</button>
+                </section>
+       
+                <article>
+                    <h1>Sobre a calculadora de insulina</h1>
+                    <p>
+                        Esta ferramenta foi projetada para ajudar pessoas com diabetes a calcular a quantidade de insulina necessária com base na contagem de carboidratos e nos níveis de glicemia. Insira os valores solicitados nos campos indicados, como sua relação insulina/carboidrato, sensibilidade à insulina e glicemia atual. A calculadora fornecerá uma estimativa para auxiliar no controle da glicemia e no manejo do diabetes. 
+                    </p>
+
+                    <p class="atencao">
+                        Atenção: essa ferramenta não substitui, e não tem como objetivo, substituir o acompanhamento com um profissional.
+                    </p>
+                </article>
+            </div>
+    </section>
+
+    <section id="calcCorrecao">
+        <h1>Calculadora de relação carboidrato-insulina</h1>
+            <div class="content">
+                <form action="#" method="post" id="calcCorrecaoForm">
+                    <label for="cho/ins">Glicemia antes da refeição</label>
+                    <input type="number" id="cho/ins">
+                    <label for="glicMeta">Glicemia depois da refeição</label>
+                    <input type="number" id="glicMeta">
+                    <label for="sensIns">Carboidratos da refeição</label>
+                    <input type="number" id="sensIns">
+                    <label for="glicRefeicao">Sensibilidade Insulina</label>
+                    <input type="number" id="glicRefeicao">
+                    <label for="cho">Insulina da refeição</label>
+                    <input type="number" id="cho">
+                    <button type="submit" id="sendCorrecao">Enviar</button>
+                </form>
+
+                <section class="resultado" id="resultadoCorrecao">
+                    <p id="paragrafoCorrecao">
+                        
+                    </p>
+                    <button id="voltarBntCorrecao">Voltar</button>
+                </section>
+                
+                <article>
+                    <h1>Sobre a calculadora de relação carboidrato-insulina</h1>
+                    <p> 
+                        Esta ferramenta foi criada para ajudar a determinar a relação ideal entre a quantidade de carboidratos ingeridos e a insulina necessária. Com base nos valores fornecidos, como glicemia antes e depois da refeição, ela calcula a proporção que melhor se ajusta às suas necessidades. Essa relação é essencial para ajustar as doses de insulina e manter um bom controle glicêmico. 
+                    </p>
+                    <p class="atencao">
+                        Lembre-se de usar os resultados como referência e de sempre consultar seu médico para validação.
+                    </p>
+
+
+                </article>
+            </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/areaUsuario.js"></script>
+</body>
+</html>

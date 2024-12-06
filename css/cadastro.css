@@ -1,0 +1,161 @@
+body {
+    background-color: #b3d7ff;
+}
+
+.container {
+    width: 96vw;
+    height: 85vh;
+    background-color: #007bff;
+    margin: 20px;
+    border-radius: 20px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+
+
+
+
+}
+
+/* Estiliza o header */
+header {
+    background-color: #fff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza o menu */
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    margin: 0;
+}
+
+/* Estiliza o logo */
+#logo {
+    margin-right: auto;
+}
+
+/* Estiliza o logo */
+#logo img {
+    width: 40px;
+}
+
+/* Estiliza o login */
+#login {
+    margin-left: auto;
+}
+
+/* Estiliza o menu */
+.menu li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Estiliza o menu */
+.menu li a:hover {
+    color: #0056b3;
+}
+
+.login {
+    background-color: #ff9f68;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form {
+    padding: 90px;
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #007bff;
+}
+
+#nome, #celular, #e-mail {
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+#data {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+label {
+    text-align: left;
+    margin-top: 15px;
+}
+
+
+.radio {
+    text-align: left;
+    margin-left: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.radio label {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    font-size: 16px; 
+}
+
+/* #radio1, #radio2, #radio3, #radio4, #radio5 {
+    width: 20px;
+    height: 20px; 
+} */
+.oi {
+    display: flex;
+}
+.Diabetestipo{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #007bff;
+    
+}
+#genero{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #007bff;
+    margin-left: 0;
+    padding-left: 80px;
+}
+#Motivospara{
+    display: flex;
+    flex-direction: column;
+    background-color: #007bff;
+}
+#Termos{
+    grid-column: 2;
+    background-color: #007bff;
+}
+#button2{
+    margin-left: 30px;
+}
+a{
+    color: white;
+}

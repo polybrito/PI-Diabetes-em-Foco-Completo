@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "ABeeZee", sans-serif;
+}
+
+body {
+    background-image: url(../img/background.png); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: '';
+}
+
+/* Estiliza o header */
+header {
+    background-color: #fff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza o menu */
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    /* Centraliza os itens */
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    /* Permite que o menu ocupe o espaço central */
+    margin: 0;
+}
+
+/* Estiliza o logo */
+#logo {
+    margin-right: auto;
+    /* Empurra o logo para a esquerda */
+}
+
+/* Estiliza o logo */
+#logo img {
+    width: 40px;
+}
+
+/* Estiliza o login */
+#login {
+    margin-left: auto;
+    /* Empurra o login para a direita */
+}
+
+/* Estiliza o menu */
+.menu li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Estiliza o menu */
+.menu li a:hover {
+    color: #0056b3;
+}
+
+/* Estiliza o login */
+.login {
+    background-color: #ff9f68;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Estiliza o login */
+.login:hover {
+    background-color: #ff8c3a;
+}
+
+h2 {
+    color: #0073b1;
+    text-align: center;
+    font-size: 30px;
+
+}
+.Carrossel-container h2{margin: 50px;}
+
+.carrossel {
+    overflow: hidden;
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: #0056b3;
+    border-radius: 45px;
+}
+
+.carrossel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 10px;
+    padding: 30px;
+    list-style-type: none;
+}
+
+.carrossel img {
+    display: block;
+    width: 60%;
+    border-radius: 20px;
+}
+
+.carrossel-img {
+    flex: 0 0 calc(1500px / 4);
+}
+
+.overlay {
+    position: absolute; /* Sobrepõe a imagem */
+    top: 30px;
+    display: none;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    width: 225px;
+    height: 225px;
+    border-radius: 8%;
+}
+.image-container:hover .overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.setas {
+    position: absolute;
+    background-color: transparent;
+    height: 200px;
+    width: 40px;
+    top: 250px;
+    border: none;
+    cursor: pointer;
+}
+
+button.setas img {
+    width: 20px;
+    height: 25px;
+}
+
+button#setaEsquerda {
+    left: 10px;
+}
+
+button#setaDireita {
+    right: 10px;
+}
+
+.containerDicas {
+    margin: 100px;
+    text-align: center;
+    color: #0056b3;
+}
+.tituloDicas{
+    margin-bottom: 80px;
+    font-size: 20px;
+}
+
+.listaDicas {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.objetoDicas {
+    background-color: #0269d9;
+    list-style-type: none;
+    border-radius: 20px;
+    padding: 25px;
+    color: #fff;
+}
+.objetoDicas h3{
+    margin-bottom: 10px;
+}
+
+@media (max-width:768px){
+    .listaDicas{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .tituloDicas{
+        margin-bottom: 10px;
+    }
+    .containerDicas{
+        margin: 30px;
+    }
+
+    .carrossel-img {
+        flex: 0 0 calc(850px / 4);
+    }
+    button.setas {
+        top: 240px;
+    }
+    .carrossel{
+       border-radius: 25px;
+    }
+    .overlay {
+        width: 191px;
+        height: 191px;
+        border-radius: 20px;
+    }
+    .carrossel img {
+        display: block;
+        width: 90%;
+        border-radius: 20px;
+    }
+
+}
+
+@media(max-width:1024px){
+    .listaDicas{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .tituloDicas{
+        margin-bottom: 10px;
+    }
+    .containerDicas{
+        margin: 30px;
+    }
+
+    .carrossel-img {
+        flex: 0 0 calc(850px / 4);
+    }
+    button.setas {
+        top: 240px;
+    }
+    .carrossel{
+       border-radius: 25px;
+    }
+    .overlay {
+        width: 191px;
+        height: 191px;
+        border-radius: 20px;
+    }
+    .carrossel img {
+        display: block;
+        width: 90%;
+        border-radius: 20px;
+    }
+}
+@media(max-width:1440px){
+    .carrossel img {
+        display: block;
+        width: 90%;
+        border-radius: 20px;
+    }
+    .overlay {
+        width: 191px;
+        height: 191px;
+        border-radius: 20px;
+    }
+    .carrossel-img {
+        flex: 0 0 calc(850px / 4);
+    }
+}

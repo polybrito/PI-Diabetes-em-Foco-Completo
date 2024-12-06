@@ -1,0 +1,287 @@
+/* IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Hind:wght@300;400;500;600;700&display=swap');
+
+/* RESET GERAL */
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-family: "ABeeZee", sans-serif;
+}
+
+/* ESTILIZAÇÃO DO HEADER */
+header {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}/* -------------------- */
+
+
+/* ORGANIZA O MENU */
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    align-items: center;
+    gap: 20px; 
+    flex-grow: 1; /* Permite que o menu ocupe o espaço central */
+    margin: 0;
+}/* -------------- */
+
+
+/* ESTILIZAÇÃO DO MENU */
+.menu li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.menu li a:hover {
+    color: #0056b3;
+}/* ------------------ */
+
+
+/* ORGANIZA/ESTRUTURA A LOGO */
+#logo {
+    margin-right: auto; /* Empurra o logo para a esquerda */
+}
+#logo img {
+    width: 40px;
+}/* ------------------------ */
+
+
+/* ORGANIZA O LOGIN */
+#login {
+    margin-left: auto; /* Empurra o login para a direita */
+}/* --------------- */
+
+
+/* ESTILIZAÇÃO DO LOGIN */
+.login {
+    background-color: #ff9f68;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.login:hover {
+    background-color: #ff8c3a;
+}/* ------------------- */
+
+
+/* ESTRUTURA BASE DA PAGINA */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../img/background.png); /* Fonte: */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}/* ----------------------- */
+
+
+/* ESTRUTURAÇÃO DE TODOS OS CONTAINERS */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+    width: 75vw;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 11px;
+    background-color: #e2e8f0;
+    border-radius: 4px
+}/* ---------------------------------- */
+
+
+/* LAYOUT DO GRID VIDEOS */
+.videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 8px;
+    grid-template-areas:
+        "video-1   video-2"
+        "video-3   video-4";
+}/* -------------------- */
+
+
+/* LAYOUT DO GRID ARTIGOS */
+.artigos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 8px;
+    grid-template-areas:
+        "artigo-1   artigo-3"
+        "artigo-2   artigo-3";
+}/* --------------------- */
+
+
+/* LAYOUT DO GRID NOTICIAS */
+.noticias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 8px;
+    grid-template-areas:
+        "noticia-1   noticia-2"
+        "noticia-1   noticia-3";
+}/* ---------------------- */
+    
+
+/* ORGANIZAR/CENTRALIZAR VIDEOS */
+.videos article {
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+}
+.video-1 iframe, .video-2 iframe, 
+.video-3 iframe, .video-4 iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}/* --------------------------- */
+
+
+/* AFASTA O TITULO DO GRID */
+.titulo {
+    margin-bottom: 10px;
+}/* ---------------------- */
+
+
+/* ORGANIZA O TEXTO DENTRO DOS BLOCOS*/
+.noticia-1, .noticia-2, .noticia-3,
+.artigo-1, .artigo-2, .artigo-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #9ca3af;
+}/* -------------------------------- */
+
+
+/* EFEITOS AO PASSAR O MOUSE EM CADA BLOCO */
+.video-1:hover, .video-2:hover, .video-3:hover, .video-4:hover,
+.noticia-1:hover, .noticia-2:hover, .noticia-3:hover, 
+.artigo-1:hover, .artigo-2:hover, .artigo-3:hover {
+    transform: scale(1.005);
+    transition: transform .3s ease;
+}/*----------------------------------------*/
+
+
+/* ESTILIZAÇÃO DA IMAGEM DE FUNDO DOS BLOCOS */
+.back-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}/* -----------------------------------------*/
+
+
+/* ESTILIZAÇÃO DE TEXTO E SUB-TEXTO */
+.texto {
+    position: relative;
+    z-index: 2; /* Deixa o texto sobreposto */
+    color: white;
+    padding: 15px;
+    background-color: rgba( 0, 0, 0, 0.7);
+    border-radius: 5px;
+}/* ------------------------------- */
+
+
+/* ESTILIZAÇÃO/ESTRUTURA DO FOOTER */
+footer {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    color: #777;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+}
+
+/* ESTRUTUA INTERNA DO FOOTER */
+.footer-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* ESTILIZAÇÃO DO FOOTER*/
+.footer-menu li a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+.footer-menu li a:hover {
+    color: #0056b3;
+}
+
+/* ORGANIZAÇÃO DA IMAGEM */
+.footer-menu li a span img {
+    width: auto;
+    height: 30px;
+}
+
+/* LOCALIZAÇÃO DO GRID-VIDEO */
+.video-1 {grid-area: video-1;}
+.video-2 {grid-area: video-2;}
+.video-3 {grid-area: video-3;}
+.video-4 {grid-area: video-4;}
+/* ------------------------- */
+
+
+/* LOCALIZAÇÃO DO GRID-ARTIGOS */
+.artigo-1 {grid-area: artigo-1;}
+.artigo-2 {grid-area: artigo-2;}
+.artigo-3 {grid-area: artigo-3;}
+/* --------------------------- */
+
+
+/* LOCALIZAÇÃO DO GRID-NOTICIAS */
+.noticia-1 {grid-area: noticia-1;}
+.noticia-2 {grid-area: noticia-2;}
+.noticia-3 {grid-area: noticia-3;}
+/* ---------------------------- */
+
+
+/* ESTILIZAÇÃO BASICA DOS LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
+}/* --------------------------- */
+
+/* AFASTA A HEADLINE DO SUB-TEXTO */
+.headline {
+    margin-bottom: 10px;
+}/* ----------------------------- */

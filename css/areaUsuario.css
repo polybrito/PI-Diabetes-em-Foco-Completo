@@ -1,0 +1,253 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #c9ecff;
+}
+
+header {
+    background-color: #fff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    & .menu {
+        list-style-type: none;
+        display: flex;
+        justify-content: center; /* Centraliza os itens */
+        align-items: center;
+        gap: 20px; 
+        flex-grow: 1; /* Permite que o menu ocupe o espaço central */
+        margin: 0;
+    }
+
+    & #logo {
+        margin-right: auto; /* Empurra o logo para a esquerda */
+    }
+
+    & #logo img {
+        width: 40px;
+    }
+ 
+    & #login {
+        margin-left: auto; 
+    }
+
+    & .menu li a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+ 
+    & .menu li a:hover {
+        color: #0056b3;
+    }
+
+    & .login {
+        background-color: #ff9f68;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    & .login:hover {
+        background-color: #ff8c3a;
+    }
+
+
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    & h1{
+        font-size: 2.2em;
+        text-align: center;
+        width: 15vw;
+
+        margin-bottom: 0px;
+        
+    }
+
+    & div.content{
+        margin-top: 10px;
+    }
+}
+
+section#calcCorrecao{
+    & .content > article > h1{
+        width: 80%;
+        margin: 0px auto 15px auto;
+        text-align: center;
+
+    }
+}
+
+section.resultado{
+    display: none;
+    color: #1d86bf;
+    margin-right: 50px;
+    width: 30vw;
+    height: auto;
+
+    & p{
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 2em;
+        background-color: white;
+        box-shadow: 1px 1px 1px 1px #00000019;
+    }
+}
+
+div.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    line-height: 1.7em;
+    margin-top: 8vh;
+
+    & div#containerGrafico{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        background-color: white;
+        border-radius: 10px;
+        height: 30vw;
+        width: 30vw;
+    
+        box-shadow: 1px 1px 1px 1px #00000019;
+    
+        & div#grafico{
+            height: 25vw;
+            width: 25vw;
+            max-width: 900px;
+            max-height: 900px;
+        }
+    }
+
+    & article{
+        align-self: center;
+        width: 40vw;
+        background-color: white;
+        box-shadow: 1px 1px 1px 1px #00000019;
+        color: #1d86bf;
+        padding: 10px;
+        border-radius: 10px;
+        
+        & h1{
+            font-size: 1.5em;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        & p{
+            font-size: 1.3em;
+        }
+
+        & p.atencao{
+            margin-top: 10px;
+            color: #f80909;
+        }
+    }
+
+    
+}
+
+
+
+
+article#graficoText{
+    background-color: #a6dfff;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    width: 30vw;
+
+    text-align: center;
+
+    & input{
+        border: 0;
+        border-radius: 10px;
+        padding: 12px 10px;
+        margin-bottom: 15px;
+    }
+
+    & label{
+        font-size: 1.5em;
+    }
+
+}
+
+button{
+    z-index: 0;
+    position: relative;
+    margin-top: 10px;
+    align-self: center;
+    padding: 12px 20px;
+    border: 0px;
+    border-radius: 15px;
+    background-color: white;
+
+    overflow: hidden;
+
+}
+
+button::before{
+    transition-duration: 0.3s;
+    content: '';
+    position: absolute;
+    transform-origin: left;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    background-color: #ffe603;
+    z-index: -1;
+
+    transform: scaleX(0);
+}
+
+button:hover{
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover::before{
+    transition: 0.5s;
+    transform: scaleX(1);
+
+
+}
+
+
+section#calcCorrecao{
+    & h1{
+        margin-top: 10px;
+        width: 30vw;
+    }
+
+    & .content{
+        flex-direction: row-reverse;
+    }
+}
+

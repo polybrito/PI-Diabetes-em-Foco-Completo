@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Hind:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "ABeeZee", sans-serif;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    background: url(../img/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #fff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    margin: 0;
+}
+
+#logo {
+    margin-right: auto;
+}
+
+#logo img {
+    width: 40px;
+}
+
+#login {
+    margin-left: auto;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #0056b3;
+}
+
+.login {
+    background-color: #ff9f68;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login:hover {
+    background-color: #ff8c3a;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+/* Ajuste o layout para duas colunas */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "carousel-section faq-section"
+        "chatbot-section faq-section";
+    gap: 20px;
+}
+
+/* Estilos do Carrossel */
+.carousel-section {
+    width: 100%;
+    grid-area: carousel-section;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-images img {
+    width: 100%;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Estilos do Chatbot */
+.chatbot-section {
+    width: 100%;
+    height: 100%;
+    grid-area: chatbot-section;
+}
+
+.chatbot {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.chatbot-messages {
+    height: calc(100% - 100px);
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.chatbot-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-input button:hover {
+    background-color: #0056b3;
+}
+
+/* Mensagens do Chatbot */
+.chatbot-messages .message {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.chatbot-messages .user-message {
+    justify-content: flex-end;
+}
+
+.chatbot-messages .user-message .bubble {
+    background-color: #007bff;
+    color: white;
+}
+
+.chatbot-messages .bot-message .bubble {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.bubble {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+/* Estilos das Perguntas Frequentes */
+.faq-section {
+    grid-area: faq-section;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-questions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.faq-questions ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.faq-title:hover {
+    color: #0056b3;
+}
+
+.faq-questions li .faq-item {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.faq-questions li.active .faq-item {
+    max-height: 1000px;
+    transition: max-height 0.5s ease;
+}
+
+.faq-questions ul li.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+footer {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    color: #777;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.footer-menu li a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.footer-menu li a:hover {
+    color: #0056b3;
+}
+
+.footer-menu li a span img {
+    width: auto;
+    height: 30px;
+
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
