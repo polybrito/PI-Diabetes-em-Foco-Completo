@@ -28,7 +28,7 @@
     </header>
     <main>
         <div class="container">
-            <form>
+            <div id="form">
                 <label> Nome Completo</label>
                 <input id="nome" type="text">
 
@@ -40,7 +40,7 @@
 
                 <label>Data de Nascimento</label>
                 <input id="data" type="date">
-            </form>
+            </div>
 
             <div id="genero" class="radio">
                 <h3>Gênero</h3>
@@ -102,14 +102,16 @@
             </div>
             <div id="Termos">
                 <label for="Termos">
-                    <input id="Termos" type="checkbox" value="Termos"> Li e aceito os <a href="#">termos de
-                        privacidade</a>
+                    <input id="Termos" type="checkbox" value="Termos"> Li e aceito os 
+                    <a href="#">termos de privacidade</a>
                 </label>
-                <a href="./areaUsuario.html"><button class="login" id="button2" onclick="">Cadastrar</button></a>
+                <button class="login" id="button2">Cadastrar</button>
 
             </div>
         </div>
     </main>
+
+    <script src="../js/cadastro.js"></script>
 </body>
 
 </html>
