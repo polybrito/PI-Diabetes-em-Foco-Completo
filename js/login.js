@@ -16,6 +16,15 @@ function oCampoEstaVazio(){
      } else{
         mensagemdeerro3.innerText = ''
      }
+}
+
+function logar() {
+    let email = document.querySelector("input#Email").value
+    let senha = document.querySelector("input#Senha").value
+
+    if(email === "example@gmail.com" && senha === "123456"){
+        window.location = "./areaUsuario.html"
     }
+}
     
     
