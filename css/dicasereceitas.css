@@ -185,6 +185,42 @@ button#setaDireita {
     margin-bottom: 10px;
 }
 
+footer {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    color: #777;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.footer-menu li a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.footer-menu li a:hover {
+    color: #0056b3;
+}
+
+.footer-menu li a span img {
+    width: auto;
+    height: 30px;
+
+}
+
 @media (max-width:768px){
     .listaDicas{
         grid-template-columns: 1fr;
