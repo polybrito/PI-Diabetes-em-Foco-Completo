@@ -202,7 +202,7 @@ form{
 
 }
 
-button{
+.calcButton{
     z-index: 0;
     position: relative;
     margin-top: 10px;
@@ -216,7 +216,7 @@ button{
 
 }
 
-button::before{
+.calcButton::before{
     transition-duration: 0.3s;
     content: '';
     position: absolute;
@@ -226,19 +226,18 @@ button::before{
 
     height: 100%;
     width: 100%;
-    background-color: #ffe603;
+    background-color: #007bff;
     z-index: -1;
 
     transform: scaleX(0);
 }
-
-button:hover{
+.calcButton:hover{
     background-color: transparent;
     color: white;
     cursor: pointer;
 }
 
-button:hover::before{
+.calcButton:hover::before{
     transition: 0.5s;
     transform: scaleX(1);
 
